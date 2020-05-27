@@ -1,15 +1,15 @@
 #calling Connection Class set as module
 import Connection as myConnection
+import Source as mySource
 
 #Initialize Class Connection
 conn = myConnection.Connection()
+#Initialize Class Source 
+src = mySource.Source()
 
 #access Class method
 greetings = conn.greetings()
 print(greetings)
 
-#Connect to PDT
-pdt_curr = conn.pdt_connection()
-pdt_curr.execute('SELECT * FROM dbo.MD_ref_agama')
-for row in pdt_curr:
-    print (row)
+#print existing agama in pdt
+src.get_agama_pdt()
