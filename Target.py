@@ -17,5 +17,6 @@ class Target:
       siakad_cur= conn.siakad_connection()
       siakad_cur.execute('SELECT count(*) from  dbo.MD_1_ref_agama')
       tgt_row_cnt = siakad_cur.fetchone()[0]
-      text = 'jumlah data Target : '
-      print ("\n{}{}".format(text,tgt_row_cnt)) 
+      return tgt_row_cnt
+      #text = 'jumlah data Target : '
+      #print ("\n{}{}".format(text,tgt_row_cnt)) 

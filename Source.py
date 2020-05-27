@@ -18,5 +18,6 @@ class Source:
       pdt_curr = conn.pdt_connection()
       pdt_curr.execute('SELECT count(*) FROM dbo.MD_ref_agama')
       src_row_cnt = pdt_curr.fetchone()[0]
-      text = 'jumlah data Source : '
-      print ("\n{}{}".format(text,src_row_cnt))
+      return src_row_cnt
+      #text = 'jumlah data Source : '
+      #print ("\n{}{}".format(text,src_row_cnt))

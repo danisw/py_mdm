@@ -20,6 +20,9 @@ src.get_agama_pdt()
 tgt.get_siakad_agama()
 
 #cek jumlah agama in pdt
-src.cek_jumlah_agama_pdt()
+jumlah_source = src.cek_jumlah_agama_pdt()
+print("jumal data source : "+str(jumlah_source))
 #cek jumlah data di database target (SIAKAD-SIPMABA)
-tgt.cek_jumlah_siakad_agama()
+jumlah_target = tgt.cek_jumlah_siakad_agama()
+print("jumlah data target : "+str(jumlah_target))
+
