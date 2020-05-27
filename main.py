@@ -18,11 +18,16 @@ print(greetings)
 src.get_agama_pdt()
 #get existing agama in target siakad
 tgt.get_siakad_agama()
+#get existing agama in target sipmaba
+tgt.get_sipmaba_agama()
 
 #cek jumlah agama in pdt
 jumlah_source = src.cek_jumlah_agama_pdt()
 print("jumal data source : "+str(jumlah_source))
 #cek jumlah data di database target (SIAKAD-SIPMABA)
-jumlah_target = tgt.cek_jumlah_siakad_agama()
-print("jumlah data target : "+str(jumlah_target))
+jumlah_target_siakad = tgt.cek_jumlah_siakad_agama()
+print("jumlah data target siakad : "+str(jumlah_target_siakad))
+#cek jumlah data di database target (SIAKAD-SIPMABA)
+jumlah_target_sipmaba = tgt.cek_jumlah_sipmaba_agama()
+print("jumlah data target sipmaba : "+str(jumlah_target_sipmaba))
 
