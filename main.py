@@ -1,5 +1,5 @@
 #calling Connection Class set as module
-import connection as myConnection
+import Connection as myConnection
 
 #Initialize Class Connection
 conn = myConnection.Connection()
