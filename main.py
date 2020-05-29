@@ -1,7 +1,6 @@
 #calling Connection Class set as module
 import Connection as myConnection
 import Source as mySource
-import Target as myTarget
 import Operation as myOperation
 
 #Initialize Class Connection
@@ -9,7 +8,7 @@ conn = myConnection.Connection()
 #Initialize Class Source 
 src = mySource.Source()
 #Initialize Class Target 
-tgt = myTarget.Target()
+
 
 #get queue changed 
 queue_changed_agama = src.get_queue_data_agama()
@@ -21,8 +20,8 @@ data_changed = src.get_all_changed_agama()
 
 #Start Operation : insert / delete sesuai mapping nya
 operation = myOperation.Operation()
-#opt = operation.execute(queue_changed_agama)
-#print(opt)
+opt = operation.execute_agama(queue_changed_agama)
+print(opt)
 
 '''
 #access Class method

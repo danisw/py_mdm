@@ -27,7 +27,7 @@ class Source:
 
     list_baru = [id_agama,nama_agama,opt]
 
-    return list_baru
+    return tuple(list_baru)
 
   #PDT get data agama
   def get_agama_pdt(self, conn=myConnection.Connection()):
