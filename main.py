@@ -2,6 +2,7 @@
 import Connection as myConnection
 import Source as mySource
 import Target as myTarget
+import Operation as myOperation
 
 #Initialize Class Connection
 conn = myConnection.Connection()
@@ -10,6 +11,20 @@ src = mySource.Source()
 #Initialize Class Target 
 tgt = myTarget.Target()
 
+#get queue changed 
+queue_changed_agama = src.get_queue_data_agama()
+print (queue_changed_agama)
+
+#get all data changed and status
+data_changed = src.get_all_changed_agama()
+#print(data_changed)
+
+#Start Operation : insert / delete sesuai mapping nya
+operation = myOperation.Operation()
+#opt = operation.execute(queue_changed_agama)
+#print(opt)
+
+'''
 #access Class method
 greetings = conn.greetings()
 print(greetings)
@@ -31,3 +46,4 @@ print("jumlah data target siakad : "+str(jumlah_target_siakad))
 jumlah_target_sipmaba = tgt.cek_jumlah_sipmaba_agama()
 print("jumlah data target sipmaba : "+str(jumlah_target_sipmaba))
 
+'''
