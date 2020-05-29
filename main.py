@@ -9,19 +9,27 @@ conn = myConnection.Connection()
 src = mySource.Source()
 #Initialize Class Target 
 
+#get all data quque
+i=0
+data_queue = src.get_queue_data_agama()
+jumlah_data = len(data_queue)
+print(jumlah_data)
+#print(data_changed)
+while i < jumlah_data:
+    queue_changed_agama = src.get_queue_data_agama()
+    operation = myOperation.Operation()
+    opt = operation.execute_agama(queue_changed_agama)
+    print(opt)
+    i += 1
 
 #get queue changed 
-queue_changed_agama = src.get_queue_data_agama()
-print (queue_changed_agama)
-
-#get all data changed and status
-data_changed = src.get_all_changed_agama()
-#print(data_changed)
+#queue_changed_agama = src.get_queue_data_agama()
+#print (queue_changed_agama)
 
 #Start Operation : insert / delete sesuai mapping nya
-operation = myOperation.Operation()
-opt = operation.execute_agama(queue_changed_agama)
-print(opt)
+#operation = myOperation.Operation()
+#opt = operation.execute_agama(queue_changed_agama)
+#print(opt)
 
 '''
 #access Class method
